@@ -157,9 +157,12 @@ Login
     padding: 20px;
     box-sizing: border-box;
     overflow: auto;
+    text-align: left;
+    line-height: 2.5;
+
 }
 
-.modal section {
+.modal>section {
     background: white;
     padding: 12px;
     border-radius: 10px;
@@ -170,18 +173,25 @@ Login
 }
 
 .btModalCase {
-    font-size: 20px;
     position: absolute;
-    top: -20px;
-    right: -20px;
-    background: white;
-    color: black;
-    font-weight: bold;
-    padding: 10px;
+    top: -13px;
+    right: -13px;
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 24px;
     border-radius: 50%;
+    border: 2px solid grey;
+    font-weight: bold;
     cursor: pointer;
+    user-select: none;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+
 
 }
+
+
 
 .modal form {
     display: flex;
