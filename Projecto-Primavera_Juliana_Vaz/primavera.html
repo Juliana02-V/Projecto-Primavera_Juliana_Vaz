@@ -22,9 +22,12 @@
             <a href="https://pt.primaverabss.com/pt/"><img src="imagens/logotipo.png"></a>
 
             <section id="topHeaderIcons">
+                <div id="campoTexto">
+                    <input type="text" id="textoPesquisa" placeholder="Pesquisar...">
+                </div>
                 <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass" title="Pesquisa"></i></a>
                 <a href="registo_utilizador.html"><i class="fa-solid fa-user-plus" title="Registo"></i></a>
-                <a href="login.html"><i class="fa-solid fa-arrow-right-to-bracket" title="Login"></i></a>
+                <a href="#" id="openModal"><i class="fa-solid fa-arrow-right-to-bracket" title="Login"></i></a>
                 <i class="fa-solid fa-bars"></i>
             </section>
         </section>
@@ -39,6 +42,26 @@
             </ul>
         </nav>
     </header>
+    <section class="modal hidden" id="loginModal">
+        <section>
+            <span class="btModalCase">X</span>
+            <p>Controlo de acessos</p>
+            <form id="loginForm">
+                <div class="input-container">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email">
+                </div>
+
+                <div class="input-container">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha">
+                </div>
+
+                <button type="submit">Validar</button>
+            </form>
+        </section>
+    </section>
+
     <main>
         <section id="banner">
             <section>
@@ -175,9 +198,13 @@
     <a href="#" id="setaAcima"><img src="imagens/setacima.png"></a>
     <!-- <section id="tela">
         <section id="secCookies">
-            <span>Este website utiliza cookies para melhorar a sua experiência de navegação. Para continuar a navegar, deve ler e aceitar os <a class="termos" href="#">Termos e Condições</a>.</span><span><a id="btLiAceito" href="javascript:void(0)">Li e aceito &gt;</a></span>
-        </section> -->
-    </section>
+            <span>Este website utiliza cookies para melhorar a sua experiência de navegação. Para continuar a navegar,
+                deve ler e aceitar os <a class="termos" href="#">Termos e Condições</a>.</span><span><a id="btLiAceito"
+                    href="javascript:void(0)">Li e aceito &gt;</a></span>
+        </section>
+    </section> -->
+
+    <script src="primavera.js"></script>
 </body>
 
 </html>
