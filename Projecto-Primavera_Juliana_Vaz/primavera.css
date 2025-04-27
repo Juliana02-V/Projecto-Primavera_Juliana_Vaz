@@ -136,6 +136,15 @@ header {
     pointer-events: auto;
 }
 
+#saudacao {
+    font-size: 16px;
+    color: #333;
+    margin-left: 20px;
+    display: inline-block;
+    font-weight: bold;
+    align-self: center;
+}
+
 /*======================
 Login
 ======================*/
@@ -238,6 +247,15 @@ Login
     margin-top: 10px;
 
 }
+
+.mensagemErro {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+
 
 /* =====================
 Banner

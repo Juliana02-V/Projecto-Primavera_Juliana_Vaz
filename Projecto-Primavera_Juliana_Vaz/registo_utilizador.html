@@ -24,9 +24,17 @@
             <a href="primavera.html"><img src="imagens/logotipo.png"></a>
 
             <section id="topHeaderIcons">
+                <div id="campoTexto">
+                    <input type="text" id="textoPesquisa" placeholder="Pesquisar...">
+
+                </div>
+
+                <div id="saudacao" class="boasVindas"></div>
+
                 <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass" title="Pesquisa"></i></a>
                 <a href="registo_utilizador.html"><i class="fa-solid fa-user-plus" title="Registo"></i></a>
-                <a href="login.html"><i class="fa-solid fa-arrow-right-to-bracket" title="Login"></i></a>
+                <a href="#" id="openModal"><i class="fa-solid fa-arrow-right-to-bracket" title="Login"></i></a>
+                <a href="#" id="logoutModal"><i class="fa-solid fa-arrow-right-from-bracket" title="Logout"></i></a>
                 <i class="fa-solid fa-bars"></i>
             </section>
         </section>
@@ -40,6 +48,27 @@
                 <li><a href="#">Carreiras</a></li>
             </ul>
         </nav>
+    </header>
+    <section class="modal hidden" id="loginModal">
+        <section>
+            <span class="btModalCase">X</span>
+            <p>Controlo de acessos</p>
+            <div id="mensagemErro" class="mensagemErro"></div>
+            <form id="loginForm">
+                <div class="input-container">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email">
+                </div>
+
+                <div class="input-container">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="password">
+                </div>
+
+                <button type="submit">Validar</button>
+            </form>
+        </section>
+    </section>
     </header>
     <main id="pag_registo">
         <h1>Registo de utilizador</h1>
@@ -169,6 +198,8 @@
             </ul>
         </section>
     </footer>
+
+    <script src="generico.js" .js"></script>
 </body>
 
 </html>
