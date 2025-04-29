@@ -26,13 +26,12 @@
             <section id="topHeaderIcons">
                 <div id="campoTexto">
                     <input type="text" id="textoPesquisa" placeholder="Pesquisar...">
-
                 </div>
-
                 <div id="saudacao" class="boasVindas"></div>
-
                 <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass" title="Pesquisa"></i></a>
-                <a href="registo_utilizador.html"><i class="fa-solid fa-user-plus" title="Registo"></i></a>
+                <a href="registo_utilizador.html"><i id="registoModal" class="fa-solid fa-user-plus"
+                        title="Registo"></i></a>
+                <a href="registo_utilizador.html"><i id="perfilModal" class="fa-regular fa-user" title="Perfil"></i></a>
                 <a href="#" id="openModal"><i class="fa-solid fa-arrow-right-to-bracket" title="Login"></i></a>
                 <a href="#" id="logoutModal"><i class="fa-solid fa-arrow-right-from-bracket" title="Logout"></i></a>
                 <i class="fa-solid fa-bars"></i>
@@ -72,7 +71,7 @@
     </header>
     <main id="pag_registo">
         <h1>Registo de utilizador</h1>
-        <form>
+        <form id="formularioRegisto">
             <div class="row g-3 align-items-center mb-3">
                 <label for="nome" class="col-form-label col-sm-2">Nome:</label>
                 <div class="col-sm-6">
@@ -82,7 +81,7 @@
             <div class="row g-3 align-items-center mb-3">
                 <label for="email" class="col-form-label col-sm-2">E-mail:</label>
                 <div class="col-sm-6">
-                    <input type="text" id="email" class="form-control">
+                    <input type="text" id="emailRegisto" class="form-control">
                 </div>
             </div>
             <div class="row g-3 align-items-center mb-3">
@@ -198,8 +197,15 @@
             </ul>
         </section>
     </footer>
-
-    <script src="generico.js" .js"></script>
+    <section id="tela">
+        <section id="secCookies">
+            <span>Este website utiliza cookies para melhorar a sua experiência de navegação. Para continuar a navegar,
+                deve ler e aceitar os <a class="termos" href="#">Termos e Condições</a>.</span><span><a id="btLiAceito"
+                    href="javascript:void(0)">Li e aceito &gt;</a></span>
+        </section>
+    </section>
+    <script src="generico.js"></script>
+    <script src="resgisto_utilizadores.js"></script>
 </body>
 
 </html>

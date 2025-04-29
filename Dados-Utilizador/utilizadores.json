@@ -1,31 +1,41 @@
 {
-    "utilizadores": [
-        {
-            "id": 1,
-            "email": "juliana@example.com",
-            "senha": "juliana",
-            "nome": "Juliana Vaz",
-            "morada": "Avenida Principal, 001",
-            "cp": "1000-001",
-            "pais": "Portugal"
-        },
-        {
-            "id": 1,
-            "email": "joao@example.com",
-            "senha": "senha123",
-            "nome": "João Silva",
-            "morada": "Rua das Flores, 123",
-            "cp": "1000-001",
-            "pais": "Portugal"
-        },
-        {
-            "id": 2,
-            "email": "maria@example.com",
-            "senha": "maria456",
-            "nome": "Maria Santos",
-            "morada": "Avenida do Mar, 45",
-            "cp": "2000-002",
-            "pais": "Portugal"
-        }
-    ]
+  "utilizadores": [
+    {
+      "id": 1,
+      "email": "juliana@example.com",
+      "senha": "juliana",
+      "nome": "Juliana Vaz",
+      "morada": "Avenida Principal, 001",
+      "cp": "1000-001",
+      "pais": "Portugal"
+    },
+    {
+      "id": 1,
+      "email": "joao@example.com",
+      "senha": "senha123",
+      "nome": "João Silva",
+      "morada": "Rua das Flores, 123",
+      "cp": "1000-001",
+      "pais": "Portugal"
+    },
+    {
+      "id": 2,
+      "email": "maria@example.com",
+      "senha": "maria456",
+      "nome": "Maria Santos",
+      "morada": "Avenida do Mar, 45",
+      "cp": "2000-002",
+      "pais": "Portugal"
+    },
+    {
+      "nome": "43ergerg",
+      "email": "ergfer@example.com",
+      "morada": "FGHFGN",
+      "codigo_postal": "2345-345",
+      "localidade": "fgnfgn",
+      "pais": "pt",
+      "senha": "1234",
+      "id": 3
+    }
+  ]
 }

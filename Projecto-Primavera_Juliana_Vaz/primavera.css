@@ -45,10 +45,12 @@ header {
     justify-content: space-between;
 }
 
-/* #topHeaderIcons {
+#topHeaderIcons {
     display: flex;
-    column-gap: 20px;
-} */
+    align-items: center;
+    column-gap: 10px;
+}
+
 #topHeaderIcons a {
     font-size: 1.5rem;
     color: inherit;
@@ -253,8 +255,6 @@ Login
     font-size: 14px;
     margin-top: 10px;
 }
-
-
 
 
 /* =====================
@@ -498,7 +498,7 @@ Equipa
     box-shadow: none;
     border: none;
 } */
-#slide {
+.slides {
     position: relative;
     text-align: center;
 }
@@ -522,6 +522,7 @@ Equipa
 .slider h3 {
     font-size: 35px;
     margin-top: 0;
+    color: white;
 }
 
 .slider p {
@@ -535,6 +536,31 @@ Equipa
 
 #slide h2 {
     color: #f27d29;
+}
+
+
+#infoSlide1 h2 {
+    color: #f27d29;
+}
+
+#infoSlide2 h2 {
+    color: #153c85;
+}
+
+#infoSlide3 h2 {
+    color: #ebc711;
+}
+
+#infoSlide4 h2 {
+    color: #153c85;
+}
+
+#infoSlide5 h2 {
+    color: #ff701e;
+}
+
+#infoSlide1 h3 {
+    color: #153c85;
 }
 
 @media only screen and (max-width: 800px) {
@@ -553,6 +579,8 @@ Equipa
         font-size: 16px;
     }
 }
+
+
 
 /* =====================
 Footer
