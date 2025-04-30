@@ -6,7 +6,8 @@
       "senha": "juliana",
       "nome": "Juliana Vaz",
       "morada": "Avenida Principal, 001",
-      "cp": "1000-001",
+      "codigo_postal": "1000-001",
+      "localidade": "fgnfgn",
       "pais": "Portugal"
     },
     {
@@ -15,7 +16,8 @@
       "senha": "senha123",
       "nome": "João Silva",
       "morada": "Rua das Flores, 123",
-      "cp": "1000-001",
+      "codigo_postal": "1000-001",
+      "localidade": "fgnfgn",
       "pais": "Portugal"
     },
     {
@@ -24,7 +26,8 @@
       "senha": "maria456",
       "nome": "Maria Santos",
       "morada": "Avenida do Mar, 45",
-      "cp": "2000-002",
+      "codigo_postal": "2000-002",
+      "localidade": "fgnfgn",
       "pais": "Portugal"
     },
     {

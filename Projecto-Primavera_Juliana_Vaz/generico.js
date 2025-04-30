@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const utilizador = JSON.parse(localStorage.getItem('utilizador'));
     let url = 'http://localhost:3000/utilizadores';
 
     const elIcon = document.querySelector('.fa-magnifying-glass');
@@ -70,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         return;
                     }
 
+                    localStorage.setItem('utilizador', JSON.stringify(user));
                     localStorage.setItem('userName', user.nome);
                     saudacao(user.nome);
                     alternarIcon(true);
@@ -105,25 +107,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (elLogout) {
         elLogout.addEventListener('click', function () {
+            localStorage.removeItem('utilizador');
             localStorage.removeItem('userName');
             elEmail.value = '';
             elPassword.value = '';
             elSaudacao.textContent = '';
             elError.style.display = 'none';
             alternarIcon(false);
+            window.location.href = 'primavera.html';
         });
     }
 
-    // Saudação ao carregar a página
-    const nome = localStorage.getItem('userName');
-    if (nome) {
-        saudacao(nome);
+    /*==================
+     Saudação ao carregar a página
+     ===================*/
+    if (utilizador) {
+        saudacao(utilizador.nome);
         alternarIcon(true);
     } else {
         alternarIcon(false);
     }
 
-    // Cookies
+    /*======================
+     Cookies
+    ========================*/
     if (!localStorage.getItem("cookiesAceitos")) {
         document.getElementById("tela").style.display = "block";
     } else {
