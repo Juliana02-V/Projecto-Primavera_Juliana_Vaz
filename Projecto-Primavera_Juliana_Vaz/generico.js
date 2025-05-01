@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const utilizador = JSON.parse(localStorage.getItem('utilizador'));
-    let url = 'http://localhost:3000/utilizadores';
+    const elSettings = document.getElementById('settings');
+
 
     const elIcon = document.querySelector('.fa-magnifying-glass');
     const elSearch = document.getElementById('textoPesquisa');
@@ -15,6 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const elLogout = document.getElementById('logoutModal');
     const elPerfil = document.getElementById('perfilModal');
     const elRegisto = document.getElementById('registoModal');
+
+    let url = 'http://localhost:3000/utilizadores';
+
+    if (utilizador && utilizador.funcao === 'admin') {
+        if (elSettings) elSettings.style.display = 'block';
+    } else if (window.location.pathname.includes('primavera.html') && elSettings) {
+        elSettings.style.display = 'none';
+    }
 
     if (elIcon && elSearch) {
         elIcon.addEventListener('click', (e) => {
@@ -61,8 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            fetch(url)
-                .then(response => response.json())
+            fetch('http://localhost:3000/utilizadores')
+                .then(res => res.json())
                 .then(utilizadores => {
                     const user = utilizadores.find(u => u.email === email && u.senha === password);
                     if (!user) {
@@ -70,13 +79,28 @@ document.addEventListener('DOMContentLoaded', () => {
                         elError.style.display = 'block';
                         return;
                     }
+                    if (user.status !== 'ativo') {
+                        alert('A sua conta está inativa. Aguarde aprovação por parte do administrador.');
+                        window.location.href = 'primavera.html';
+                        return;
+                    }
 
-                    localStorage.setItem('utilizador', JSON.stringify(user));
-                    localStorage.setItem('userName', user.nome);
-                    saudacao(user.nome);
-                    alternarIcon(true);
-                    elModal.style.display = 'none';
-                    document.body.style.overflow = '';
+                    if (user.funcao === 'admin') {
+
+                        localStorage.setItem('utilizador', JSON.stringify(user));
+                        localStorage.setItem('userName', user.nome);
+                        saudacao(user.nome);
+                        alternarIcon(true);
+                        elSettings.style.display = 'block';
+                        elModal.style.display = 'none';
+                        document.body.style.overflow = '';
+                    } else {
+                        localStorage.setItem('utilizador', JSON.stringify(user));
+                        saudacao(user.nome);
+                        alternarIcon(true);
+                        elModal.style.display = 'none';
+                        document.body.style.overflow = '';
+                    }
                 })
                 .catch(error => {
                     console.error('Erro ao aceder à base de dados:', error);
@@ -86,12 +110,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function saudacao(nome) {
-        const saudacao = document.getElementById('saudacao');
-        saudacao.textContent = `Bem-vindo, ${nome}`;
-    }
+
+
+
 
     function alternarIcon(icon) {
+        if (!elOpenModal || !elLogout || !elPerfil || !elRegisto) return;
         if (icon) {
             elOpenModal.style.display = 'none';
             elLogout.style.display = 'block';
@@ -109,18 +133,25 @@ document.addEventListener('DOMContentLoaded', () => {
         elLogout.addEventListener('click', function () {
             localStorage.removeItem('utilizador');
             localStorage.removeItem('userName');
-            elEmail.value = '';
-            elPassword.value = '';
-            elSaudacao.textContent = '';
-            elError.style.display = 'none';
+            sessionStorage.clear();
+            if (elEmail) elEmail.value = '';
+            if (elPassword) elPassword.value = '';
+            if (elSaudacao) elSaudacao.textContent = '';
             alternarIcon(false);
+            if (elSettings) elSettings.style.display = 'none';
             window.location.href = 'primavera.html';
+
         });
     }
 
     /*==================
      Saudação ao carregar a página
      ===================*/
+    function saudacao(nome) {
+        const saudacao = document.getElementById('saudacao');
+        saudacao.textContent = `Bem-vindo, ${nome}`;
+    }
+
     if (utilizador) {
         saudacao(utilizador.nome);
         alternarIcon(true);

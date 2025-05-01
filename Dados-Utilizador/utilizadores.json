@@ -2,33 +2,39 @@
   "utilizadores": [
     {
       "id": 1,
-      "email": "juliana@example.com",
-      "senha": "juliana",
       "nome": "Juliana Vaz",
-      "morada": "Avenida Principal, 001",
-      "codigo_postal": "1000-001",
-      "localidade": "fgnfgn",
-      "pais": "Portugal"
-    },
-    {
-      "id": 1,
-      "email": "joao@example.com",
-      "senha": "senha123",
-      "nome": "João Silva",
-      "morada": "Rua das Flores, 123",
-      "codigo_postal": "1000-001",
-      "localidade": "fgnfgn",
-      "pais": "Portugal"
+      "email": "juliana@example.com",
+      "morada": "Avenida Principal, 009",
+      "codigo_postal": "1234-679",
+      "localidade": "guimaraes556",
+      "pais": "Portugal",
+      "senha": "Juliana16.",
+      "funcao": "admin",
+      "status": "ativo"
     },
     {
       "id": 2,
+      "nome": "João Silva",
+      "email": "joao@example.com",
+      "morada": "Rua das Flores, 123",
+      "codigo_postal": "1000-001",
+      "localidade": "fgnfgn",
+      "pais": "Portugal",
+      "funcao": "utilizador",
+      "status": "ativo",
+      "senha": "senha123"
+    },
+    {
+      "id": 3,
       "email": "maria@example.com",
       "senha": "maria456",
       "nome": "Maria Santos",
       "morada": "Avenida do Mar, 45",
       "codigo_postal": "2000-002",
       "localidade": "fgnfgn",
-      "pais": "Portugal"
+      "pais": "Portugal",
+      "funcao": "utilizador",
+      "status": "ativo"
     },
     {
       "nome": "43ergerg",
@@ -38,7 +44,45 @@
       "localidade": "fgnfgn",
       "pais": "pt",
       "senha": "1234",
-      "id": 3
+      "id": 4,
+      "funcao": "utilizador",
+      "status": "ativo"
+    },
+    {
+      "id": 5,
+      "nome": "Juliana Vaz",
+      "email": "admin@example.com",
+      "senha": "admin123",
+      "morada": "Avenida Principal, 009",
+      "codigo_postal": "1234-679",
+      "localidade": "Lisboa",
+      "pais": "Portugal",
+      "funcao": "admin",
+      "status": "ativo"
+    },
+    {
+      "nome": "hdsgchsdg",
+      "email": "sdcsdc@example.com",
+      "morada": "hsgcuhjdg",
+      "codigo_postal": "1234-123",
+      "localidade": "fdgbrg",
+      "pais": "es",
+      "senha": "123qwerty",
+      "funcao": "utilizador",
+      "status": "inativo",
+      "id": 6
+    },
+    {
+      "nome": "juliana",
+      "email": "123",
+      "morada": "sdesd",
+      "codigo_postal": "1234-123",
+      "localidade": "fgb",
+      "pais": "pt",
+      "senha": "Juliana16!",
+      "funcao": "utilizador",
+      "status": "inativo",
+      "id": 7
     }
   ]
 }
